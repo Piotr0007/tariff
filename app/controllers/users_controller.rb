@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+ 
+
   def index
   end  
   def new
@@ -16,13 +18,12 @@ class UsersController < ApplicationController
  # 	end      
  # end 
   def create
-     @user = User.new(params.require(:user).permit(:name, :lastname, :email, :phone, :password, :password_confirmation))
-   # @user = User.new(params.require[:user].permit(:name, :lastname, :email, :phone, :password))
+    @user = User.new(params.require(:user).permit(:name, :lastname, :email, :phone, :password, :password_confirmation))
     @user.save
     redirect_to @user
   end  
   def show
-    @user = User.find(params[:id])
+    
   end
 
 

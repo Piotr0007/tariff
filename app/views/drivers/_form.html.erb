@@ -1,0 +1,79 @@
+
+<%= render 'new', model: @driver %>
+<%= form_for @driver do |f| %>
+
+
+
+  <div class ="form_group">
+  
+
+    <%= f.label :name %><br>
+
+    <%= f.text_field :name, class: "form-control", placeholder: "Title" %>
+
+  </div>
+
+  <div class ="form_group">  
+
+    <%= f.label :lastname %><br>
+
+    <%= f.text_area :lastname, class: "form-control", placeholder: "Text" %>
+
+  </div>
+
+  <div class ="form_group">  
+
+    <%= f.label :email %><br>
+
+    <%= f.file_field :email, class: "form-control", placeholder: "Image" %>
+
+  </div>
+
+
+
+  <div class ="form_group">
+  
+
+    <%= f.label :"brithday" %><br>
+
+    <%= f.text_field :"brithday", class: "form-control", placeholder: "Tags" %>
+
+  </div>
+    <div class ="form_group">
+  
+
+    <%= f.label :"id_card_driver" %><br>
+
+    <%= f.text_field :"id_card_driver", class: "form-control", placeholder: "Tags" %>
+
+  </div>
+    <div class ="form_group">
+  
+
+    <%= f.label :"nationality" %><br>
+
+    <%= f.text_field :"nationality", class: "form-control", placeholder: "Tags" %>
+
+  </div>
+    <div class ="form_group">
+  
+
+    <%= f.label :"password_digest" %><br>
+
+    <%= f.text_field :"password_digest", class: "form-control", placeholder: "Tags" %>
+
+  </div>
+  <p>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
+</p>
+
+  <p>
+
+    <%= f.submit class: "btn btn-default"%>
+
+  </p>
+
+
+<% end %>
+
