@@ -6,6 +6,8 @@ resources:users
 
 resources:drivers
 
+resources:courses
+
 
 
 

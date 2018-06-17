@@ -12,7 +12,9 @@ class DriversController < ApplicationController
     @driver.save
   	redirect_to @driver
   end 
-
+  def show
+    
+  end
 
 end
 

@@ -1,0 +1,22 @@
+<h1>Create Course</h1>
+
+<%= form_for :course, url: courses_path do |f| %>
+<p>
+<%= f.label :each_people %><br>
+<%= f.text_field :each_people %>
+</p>
+<p>
+<%= f.label :from_to %><br>
+<%= f.text_field :from_to %>
+</p>
+<p>
+<%= f.label :adress %><br>
+  <%= f.email_field :adress, class: 'form-control' %>
+</p>
+
+<p>
+<%= f.submit %>
+</p>
+<% end %>
+
+
