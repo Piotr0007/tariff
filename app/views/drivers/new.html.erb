@@ -1,42 +1,65 @@
-<h1>New<h1>
+<h1>Create new user</h1>
 
 
 <%= form_for :driver, url: drivers_path do |f| %>
 
+ <div class ="form_group">
+  
 
-<p>
-<%= f.label :name %><br>
-<%= f.text_field :name %>
-</p>
-<p>
-<%= f.label :lastname %><br>
-<%= f.text_field :lastname %>
-</p>
+    <%= f.label :name %><br>
 
-<p>
-<%= f.label :brithday %><br>
-<%= f.date_field :brithday %>
-</p>
-<p>
-<%= f.label :nationality %><br>
-<%= f.text_field :nationality %>
-</p>
-<p>
-<%= f.label :id_card_driver %><br>
-<%= f.text_field :id_card_driver %>
-</p>
-<p>
-<%= f.label :password %><br>
-  <%= f.password_field :password, class: 'form-control' %>
+    <%= f.text_field :name, class: "form-control", placeholder: "name" %>
 
-</p>
-<p>
-<%= f.label :password_confirmation %><br>
-<%= f.password_field :password_confirmation %>
-</p>
-<p>
-<%= f.submit %>
-</p>
-<%end%>
+  </div>
 
- 
+  <div class ="form_group">  
+
+    <%= f.label :lastname %><br>
+
+    <%= f.text_field :lastname, class: "form-control", placeholder: "lastname" %>
+
+  </div>
+  <div class ="form_group">
+  
+
+    <%= f.label :"brithday" %><br>
+
+    <%= f.date_field :"brithday", class: "form-control" %>
+
+  </div>
+    <div class ="form_group">
+  
+
+    <%= f.label :"id_card_driver" %><br>
+
+    <%= f.text_field :"id_card_driver", class: "form-control", placeholder: "Id_card_driver" %>
+
+  </div>
+    <div class ="form_group">
+  
+
+    <%= f.label :"nationality" %><br>
+
+    <%= f.text_field :"nationality", class: "form-control", placeholder: "nationality" %>
+
+  </div>
+    <div class ="form_group">
+  
+
+    <%= f.label :"password_digest" %><br>
+
+    <%= f.password_field :"password_digest", class: "form-control", placeholder: "password" %>
+
+  </div>
+  <p>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :"password_confirmation", class: "form-control", placeholder: "password confirmation" %>
+
+  <p>
+
+    <%= f.submit class: "btn btn-default"%>
+
+  </p>
+
+
+<% end %>
