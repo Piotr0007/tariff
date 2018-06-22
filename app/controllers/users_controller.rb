@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
   end  
   def new
-  	@user =User.new
+  	@user = User.new
 
   end
  # def create
@@ -23,8 +23,24 @@ class UsersController < ApplicationController
     redirect_to @user
   end  
   def show
-    
+    @course  = @user.courses.build(course: session[:course])   
+    @like = Like.find_or_initialize_by(article: @article, user: current_user)  
+
+    respond_to do |format|
+    format.html do 
+      render
   end
+    format.json do
+    render json: {
+      id: @article.id,
+      likes: @article.likes.count, 
+      comments: @article.comments.count
+    }
+  end
+  end 
+  end
+    
+  
 
 
 

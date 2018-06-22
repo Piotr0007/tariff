@@ -1,9 +1,7 @@
 class CoursesController < ApplicationController
 
   def index
-
-  end
-
+  end 
   def new 
     @course = Course.new
   end

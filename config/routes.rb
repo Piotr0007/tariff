@@ -8,6 +8,8 @@ resources:drivers
 
 resources:courses
 
+resources:welcome
+
 
 
 
@@ -27,7 +29,13 @@ resources:courses
   get 'user/new'
   get 'user/show'
   get 'drivers/new'
-   get 'driver/new'
+  get 'driver/new'
+    post "courses/new"
+    post "welcome/about_tariff"
+    post "welcome/news"
+    post "welcome/Your_journeys"
+    post "welcome/settings"
+   
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

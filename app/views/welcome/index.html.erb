@@ -1,2 +1,13 @@
+<div class ="hero-unit">
 <h1>Welcome in Tariff</h1>
 
+<h3>Menu</h3>
+
+<%= button_to("About tariff", :controller => 'welcome',action: "about_tariff", :class=> 'btn btn-default') %>
+<%= button_to("News", :controller => 'welcome', action: "news", :class=> 'btn btn-default') %>
+<%= button_to("Your journeys", :controller => 'welcome', action: "Your_journeys", :class=> 'btn btn-default') %>
+<%= button_to "Go", controller: "courses", action: "new", id: @course %>
+<%= button_to("Settings", :controller => 'welcome', action: "settings", :class=> 'btn btn-default') %>
+<%= link_to("Log Out", {:controller => 'welcome'}, :class=> 'btn btn-default') %>
+
+</div>
