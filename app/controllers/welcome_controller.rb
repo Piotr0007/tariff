@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 	 
   def index
-  	@welcome
+  	
   end
   def new
   	@welcome = Welcome.new
@@ -15,6 +15,8 @@ class WelcomeController < ApplicationController
   def Your_journeys
   end
   def settings
+  end
+  def log_of
   end
  
 end

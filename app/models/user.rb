@@ -1,8 +1,8 @@
 class User < ApplicationRecord
 
-  
-  before_save :downcase_email
-  before_create :create_activation_digest
+   has_many :courses
+
+
   validates :name, presence: true, length: { maximum: 15}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
@@ -18,11 +18,27 @@ class User < ApplicationRecord
                        :length => {:within => 6..40},
                        :allow_blank => true,
                        :on => :update
-  validates  :phone, presence: true, length: { minimum:9 }
+  
+#validates :phone,   :presence => {:message => 'hi, bad operation!'},
+#                    :numericality => true,
+#                   :length => { :minimum => 9, :maximum => 15 }
+#
+#                    number_regex = /\d[0-9]\)*\z/
+#validates :phone,:presence => true,
+#                 :numericality => true,
+#                 :length => { :minimum => 9, :maximum => 15 }
+
+  VALID_PHONE_REGEX = /\d[0-9]\)*\z/
+  validates :phone, presence: true, length: { :minimum => 9, :maximum => 15}, format:{with: VALID_PHONE_REGEX}, 
+             uniqueness: false
+          
+          
+
+
+
 
  
 
- has_many :courses
 
 
 

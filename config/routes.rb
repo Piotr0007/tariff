@@ -35,6 +35,7 @@ resources:welcome
     post "welcome/news"
     post "welcome/Your_journeys"
     post "welcome/settings"
+    post "welcome/log_of"
    
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -9,7 +9,7 @@ class DriversController < ApplicationController
   
   def create
     @driver = Driver.new(params.require(:driver).permit(:name, :lastname, :email, :brithday, :id_card_driver, :nationality, :password, :password_confirmation))
-    @driver.save
+    if @driver.save
   	redirect_to @driver
   end 
   def show
